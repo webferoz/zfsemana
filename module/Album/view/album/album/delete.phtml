@@ -6,7 +6,7 @@ $this->headTitle($title);
  
 <p>Tem certeza que deseja remover esse album?
     '<?php echo $this->escapeHtml($album->getTitle()); ?>' by
-    '<?php echo $this->escapeHtml($album->getArtist); ?>'?
+    '<?php echo $this->escapeHtml($album->getArtist()); ?>'?
 </p>
 <?php
 $url = $this->url('album', array(
