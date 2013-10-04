@@ -8,7 +8,11 @@ class AlbumController extends AbstractActionController
 {
     public function indexAction()
     {
+        $view = new ViewModel();
         
+        $view->setTerminal(true);
+        
+        return $view;
     }
 
     public function addAction()
