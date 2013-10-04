@@ -4,7 +4,6 @@ namespace Album\Controller;
  
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Doctrine\ORM\EntityManager; 
 use Album\Form\AlbumForm; // <- adicionar isso
 use Album\Entity\Album; // <- adicionar isso
  
@@ -14,11 +13,6 @@ class AlbumController extends AbstractActionController
      * @var Doctrine\ORM\EntityManager
      */
     protected $em;
- 
-    public function setEntityManager(EntityManager $em)
-    {
-        $this->em = $em;
-    }
  
     public function getEntityManager()
     {
