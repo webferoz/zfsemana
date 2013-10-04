@@ -27,8 +27,11 @@ class AlbumController extends AbstractActionController
  
     public function indexAction()
     {
-        echo 'oi'; exit;
         
+        $albums =  $this->getEntityManager()->getRepository('Album\Entity\Album')->findAll();
+        
+        var_dump($album);
+
         return new ViewModel(array(
             'albums' => $this->getEntityManager()->getRepository('Album\Entity\Album')->findAll()
         ));
